@@ -1,0 +1,405 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "ubuntu";
+}
+body {
+  background-color: #cccccc;
+}
+
+/* HEADER */
+header .header-left {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  background: #0b2239;
+  position: fixed;
+  top: 0;
+}
+header .header-left .logo {
+  width: 100px;
+}
+header .header-left .logo img {
+  width: 100%;
+  height: auto;
+}
+header .header-left nav {
+  margin-left: 50px;
+}
+header .header-left nav ul {
+  display: flex;
+}
+header li:hover {
+  transform: scale(1.1);
+  text-shadow: #ee742c 0.1rem 0.1rem 0.1rem;
+}
+
+header nav ul li a {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 25px;
+  transition: 0.5s;
+}
+header .active-link {
+  font-weight: bold;
+  color: blue; /* Example active link styling */
+}
+header .active {
+  display: block;
+  color: #fff;
+  background-color: #ee742c;
+  transition: ease-in 0.75s;
+  animation: 1s ad 1;
+}
+header .rm {
+  background: transparent;
+  transition: ease-in 0.75s;
+}
+header .header-right {
+  display: flex;
+  align-items: center;
+}
+header .header-right .hamburger {
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+header .header-right .hamburger div {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+/* MAIN-CONTAINER */
+.main-container {
+  background-color: #fff;
+  margin: 10rem 10rem 10rem 10rem;
+  display: flex;
+  flex-direction: column;
+  height: 31rem;
+  box-shadow: 1px 1px 10px 10px rgba(128, 128, 128, 0.76);
+  border-radius: 20px;
+}
+.prd {
+  justify-content: center;
+  display: flex;
+}
+.sub-container {
+  text-align: center;
+  font-size: 20px;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.short-url {
+  margin: 2rem 2rem 2rem 2rem;
+}
+.short-url h1 {
+  margin-bottom: 3rem;
+}
+.short-url label {
+  font-size: 18px;
+  display: flex;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+.short-url input {
+  width: 90%;
+  height: 3rem;
+  font-size: 23px;
+  padding-left: 1rem;
+  border: 1.5px solid black;
+  border-radius: 0px;
+  outline: none;
+  border-radius: 20px 0px 0px 0px;
+}
+.infoPlaceholder::-moz-placeholder {
+  font-weight: lighter;
+  color: #afb2b3;
+}
+.btn {
+  height: 3rem;
+  position: absolute;
+  text-decoration: none;
+  border: 1.5px solid black;
+  border-left: 0px;
+  font-size: 20px;
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  color: #fff;
+  background-color: #ee742c;
+  border-radius: 0px 0px 20px 0px;
+  cursor: pointer;
+}
+.result {
+  justify-content: center;
+  align-items: baseline;
+  display: flex;
+  cursor: pointer;
+
+  padding: 2rem 2rem 2rem 2rem;
+  text-align: center;
+  color: black;
+}
+.short-url {
+  text-decoration: none;
+}
+.copy-btn {
+  color: black;
+}
+.h3 {
+  text-align: center;
+  display: none;
+}
+.show {
+  display: block;
+  animation: 4s shw 1;
+}
+
+/* ABOUT */
+.about {
+  border-radius: 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  margin: 10rem 10rem 10rem 10rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px 10px rgba(128, 128, 128, 0.76);
+  border-radius: 20px;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about h3 {
+  margin-top: 1.5rem;
+  color: #ee742c;
+}
+
+.about p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.about ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about li {
+  color: #555;
+}
+
+.about ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about ul li::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+.about .technology {
+  margin-top: 1.5rem;
+}
+
+.about .technology h3 {
+  margin-top: 1rem;
+}
+
+.about .technology ul {
+  margin-top: 0.5rem;
+}
+
+.about .technology li {
+  color: #555;
+}
+
+.about .technology ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about .team {
+  margin-top: 1.5rem;
+}
+
+.about .team h3 {
+  margin-top: 1rem;
+}
+
+.about .team p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.about .started {
+  margin-top: 1.5rem;
+}
+
+.about .started p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.about .started p:last-child {
+  margin-bottom: 0;
+}
+
+/* Products */
+
+.products {
+  border-radius: 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  margin: 10rem auto; /* Center align horizontally */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.76);
+}
+
+.products h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.product {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #333;
+}
+
+.product p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Tech Stack */
+/* styles.css */
+
+/* Styling for .techstack */
+.techstack {
+  border-radius: 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  margin: 10rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.76);
+}
+
+.techstack h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.techstack h3 {
+  margin-top: 1.5rem;
+  color: #ee742c;
+}
+
+.techstack p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.techstack ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.techstack ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.techstack ul li::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  header {
+    height: 100px;
+    padding: 0 20px;
+  }
+  .hamburger {
+    display: block;
+    z-index: 1;
+  }
+  nav {
+    margin-left: 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #0b2239;
+    transition: 0.3s;
+    text-align: center;
+    display: none;
+  }
+  nav.active {
+    display: block;
+  }
+  header .header-left nav ul {
+    display: block;
+  }
+  .products {
+    margin: 5rem auto; /* Adjust margin for smaller screens */
+  }
+}
+
+/* animation */
+@keyframes ad {
+  0% {
+    background: #e4c8b7;
+  }
+  100% {
+    background: #ee742c;
+  }
+}
+@keyframes shw {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
