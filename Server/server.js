@@ -24,7 +24,7 @@ const ShortUrlSchema = new mongoose.Schema({
 });
 
 const ShortUrl = mongoose.model('ShortUrl', ShortUrlSchema);
-app.post('api/create-short-url', async (req, res) => {
+app.post('/api/create-short-url', async (req, res) => {
   const { longurl } = req.body;
   try {
     if (!longurl.match(/^(http:\/\/|https:\/\/)/)) {
@@ -51,7 +51,7 @@ app.post('api/create-short-url', async (req, res) => {
   }
 });
 
-app.get('api/get-all-short-urls', async (req, res) => {
+app.get('/api/get-all-short-urls', async (req, res) => {
   try {
     const urls = await ShortUrl.find();
     res.json(urls);
@@ -61,7 +61,7 @@ app.get('api/get-all-short-urls', async (req, res) => {
   }
 });
 
-app.get(':shorturlid', async (req, res) => {
+app.get('/:shorturlid', async (req, res) => {
   const { shorturlid } = req.params;
   try {
     const url = await ShortUrl.findOne({ shortUrlId: shorturlid });
@@ -70,7 +70,7 @@ app.get(':shorturlid', async (req, res) => {
       return res.status(404).json({ error: 'Short URL not found' });
     }
 
-
+    
     url.count++;
     await url.save();
 

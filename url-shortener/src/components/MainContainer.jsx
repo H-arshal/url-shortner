@@ -101,7 +101,7 @@ function MainContainer() {
 
     setLoading(true);
 
-    axios.post(`${apiBaseUrl}/api/create-short-url`, { longurl: longUrl })
+    axios.post(`${apiBaseUrl}api/create-short-url`, { longurl: longUrl })
       .then(response => {
         setLoading(false);
         if (response.data.status === 'ok') {
