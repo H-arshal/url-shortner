@@ -1,13 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors()); 
-const mongoURI = 'mongodb+srv://root:0000@data.ek7rb.mongodb.net/?retryWrites=true&w=majority&appName=Data';
+const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -61,20 +63,18 @@ app.get('/api/get-all-short-urls', async (req, res) => {
 
 app.get('/:shorturlid', async (req, res) => {
   const { shorturlid } = req.params;
-
   try {
-    // Find the URL by short URL ID
     const url = await ShortUrl.findOne({ shortUrlId: shorturlid });
 
     if (!url) {
       return res.status(404).json({ error: 'Short URL not found' });
     }
 
-    // Increment the visit count
+    
     url.count++;
     await url.save();
 
-    // Redirect to the original long URL
+
     res.redirect(url.longUrl);
   } catch (error) {
     console.error(error);
@@ -82,7 +82,7 @@ app.get('/:shorturlid', async (req, res) => {
   }
 });
 
-// Start server
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
