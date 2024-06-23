@@ -105,7 +105,7 @@ function MainContainer() {
       .then(response => {
         setLoading(false);
         if (response.data.status === 'ok') {
-          setShortUrl(`${apiBaseUrl}/${response.data.shortUrlId}`);
+          setShortUrl(`${apiBaseUrl}${response.data.shortUrlId}`);
         }
       })
       .catch(error => {
