@@ -5,7 +5,13 @@ const productsList = [
   {
     name: 'Resume Analyzer',
     description: 'Analyzes resumes for key information and metrics.',
-    githubLink: 'https://github.com/gunjand01/Major-Project/'
+    githubLink: 'https://github.com/gunjand01/Major-Project/',
+    techStack:[ 
+      'Machine Learning',
+      'Python',
+      'React.js',
+      'Node.js',
+    ]
   },
   {
     name: 'Online Contact Manager',
